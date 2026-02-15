@@ -138,7 +138,7 @@ def apis(idd, region):
         'Authorization': f'Bearer {token}',
         'X-Unity-Version': '2018.4.11f1',
         'X-GA': 'v1 1',
-        'ReleaseVersion': 'OB51',
+        'ReleaseVersion': 'OB52',
         'Content-Type': 'application/x-www-form-urlencoded',
     }
     
@@ -152,7 +152,7 @@ def apis(idd, region):
         raise
 
 # ---------------- FLASK ROUTES ----------------
-@app.route('/accinfo', methods=['GET'])
+@app.route('/check', methods=['GET'])
 def get_player_info():
     try:
         uid = request.args.get('uid')
